@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Portfolio - デベロッパー</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-text">ポートフォリオ</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" data-text="ホーム">Home</a></li>
+          <li><a href="#about" data-text="について">About</a></li>
+          <li><a href="#skills" data-text="スキル">Skills</a></li>
+          <li><a href="#projects" data-text="プロジェクト">Projects</a></li>
+          <li><a href="#contact" data-text="連絡先">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="glitch-container">
+          <h1 class="glitch">TANISHA</h1>
+          <h2 class="japanese-text">タニシャ</h2>
+        </div>
+        <p class="hero-subtitle">Web wizard, pixel perfect precision.</p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="scrollToSection('projects')">
+            <span>View Projects</span>
+            <div class="btn-overlay"></div>
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('contact')">
+            <span>Contact Me</span>
+            <div class="btn-overlay"></div>
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="ANIME.png" alt="Girl Portrait" class="character-image" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <span class="section-subtitle">私について</span>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="intro-text">
+              Hi, I'm Tanisha — a creative web developer blending clean code
+              with captivating design. From responsive layouts to dynamic user
+              experiences, I build digital solutions that don't just work — they
+              <i>wow</i>. Let's turn ideas into interactive reality!
+            </p>
+            <div class="stats">
+              <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Years</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Commits</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="code-block">
+              <div class="code-header">
+                <div class="code-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="code-title">developer.js</span>
+              </div>
+              <div class="code-content">
+                <span class="code-line">const developer = {</span>
+                <span class="code-line"> name: 'Your Name',</span>
+                <span class="code-line"> passion: 'anime & code',</span>
+                <span class="code-line"> skills: ['JS', 'React', 'Node'],</span>
+                <span class="code-line"> motto: '頑張って！'</span>
+                <span class="code-line">};</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Skills</h2>
+          <span class="section-subtitle">スキル</span>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card" data-skill="javascript">
+            <div class="skill-icon">⚡</div>
+            <h3>JavaScript</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90"></div>
+            </div>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-card" data-skill="react">
+            <div class="skill-icon">⚛️</div>
+            <h3>React</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="70"></div>
+            </div>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-card" data-skill="nodejs">
+            <div class="skill-icon">🚀</div>
+            <h3>Node.js</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="80"></div>
+            </div>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="skill-card" data-skill="nodejs">
+            <div class="skill-icon">🐍</div>
+            <h3>Python</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="97"></div>
+            </div>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="skill-card" data-skill="css">
+            <div class="skill-icon">🎨</div>
+            <h3>CSS</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="95"></div>
+            </div>
+            <span class="skill-level">95%</span>
+          </div>
+          <div class="skill-card" data-skill="css">
+            <div class="skill-icon">🪡</div>
+            <h3>Flutter</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="70"></div>
+            </div>
+            <span class="skill-level">95%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <span class="section-subtitle">プロジェクト</span>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image" >
+                <img src="flat-user-interface-concept-with-weather-widgets-web-elements-mobile-design_1284-45211.webp" alt="Girl Portrait" class="character-image">
+              <div class="project-overlay">
+                <button class="project-btn">View Project</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Weather App</h3>
+              <p>
+                Real-time weather updates using live API with sleek UI design
+              </p>
+              <div class="project-tech">
+                <span>React.js</span>
+                <span>OpenWeatherMap API</span>
+                <span>Tailwind CSS</span>
+                <span>Axios</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+                <img src="original-d3c76d44a77631c2717c6f3d95a7523c.webp" alt="Girl Portrait" class="character-image">
+              <div class="project-overlay">
+                <button class="project-btn">View Project</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>E-commerce Website</h3>
+              <p>
+                Built a product-based shop with cart, login, and checkout
+                features.
+              </p>
+              <div class="project-tech">
+                <span>React.js</span>
+                <span>Redux</span>
+                <span>Firebase</span>
+                <span>Stripe API</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+                <img src="pic_pad1.webp" alt="Girl Portrait" class="character-image">
+              <div class="project-overlay">
+                <button class="project-btn">View Project</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Virtual Study Room (Pomodoro + Chat)</h3>
+              <p>
+                Join rooms, stay focused, and study virtually with global peers.
+              </p>
+              <div class="project-tech">
+                <span>Next.js</span>
+                <span>Socket.io</span>
+                <span>Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contact</h2>
+          <span class="section-subtitle">連絡先</span>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p>tanishagautam@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">💼</div>
+              <div class="contact-details">
+                <h3>LinkedIn</h3>
+                <p>linkedin.com/in/tanisha</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🐱</div>
+              <div class="contact-details">
+                <h3>GitHub</h3>
+                <p>github.com/tanisha</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" required />
+                <label for="name">Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" required />
+                <label for="email">Email</label>
+              </div>
+              <div class="form-group">
+                <textarea id="message" rows="5" required></textarea>
+                <label for="message">Message</label>
+              </div>
+              <button type="submit" class="btn-primary">
+                <span>Send Message</span>
+                <div class="btn-overlay"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Tanisha's Portfolio. Made with ❤️</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
