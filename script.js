@@ -299,27 +299,7 @@ notificationStyles.textContent = `
 document.head.appendChild(notificationStyles);
 
 // Easter Egg - Konami Code
-function setupKonamiCode() {
-    const konamiCode = [
-        'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
-        'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
-        'KeyB', 'KeyA'
-    ];
-    
-    let konamiIndex = 0;
-    
-    document.addEventListener('keydown', (e) => {
-        if (e.code === konamiCode[konamiIndex]) {
-            konamiIndex++;
-            if (konamiIndex === konamiCode.length) {
-                activateEasterEgg();
-                konamiIndex = 0;
-            }
-        } else {
-            konamiIndex = 0;
-        }
-    });
-}
+
 
 function activateEasterEgg() {
     // Create anime-style explosion effect
