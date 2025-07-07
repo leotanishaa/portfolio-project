@@ -298,7 +298,7 @@ notificationStyles.textContent = `
 `;
 document.head.appendChild(notificationStyles);
 
-// Easter Egg - Konami Code
+
 
 
 function activateEasterEgg() {
